@@ -1,0 +1,616 @@
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.8.1">
+    
+    
+      
+        <title>File Operation - Linux Docs</title>
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr-1df76c4e58.js"></script>
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application-bfecc7305d.css">
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    
+  </head>
+  
+  
+  
+  
+    <body>
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <a href="../.." title="Linux Docs" class="md-icon md-icon--home md-header-nav__button">
+          </a>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+                <span class="md-header-nav__parent">
+                  Basic
+                </span>
+              
+            
+            File Operation
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">close</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result" data-md-lang-search="" data-md-lang-tokenizer="[\s\-]+">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    
+      <i class="md-icon md-icon--home md-nav__button"></i>
+    
+    Linux Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Basic
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Basic
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../preparation/" title="Quick Start" class="md-nav__link">
+      Quick Start
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        File Operation
+      </label>
+    
+    <a href="./" title="File Operation" class="md-nav__link md-nav__link--active">
+      File Operation
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#file-accessing" title="File Accessing" class="md-nav__link">
+    File Accessing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resource-checking" title="Resource checking" class="md-nav__link">
+    Resource checking
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-text-editing" title="Advanced Text editing" class="md-nav__link">
+    Advanced Text editing
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../folder-structure/" title="Folder structure" class="md-nav__link">
+      Folder structure
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../user-account-management/" title="User Account Management" class="md-nav__link">
+      User Account Management
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../performssion/" title="Performission Control" class="md-nav__link">
+      Performission Control
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Advanced
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Advanced
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/vim/" title="Basic Vim" class="md-nav__link">
+      Basic Vim
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/scripting/" title="Shell scripting" class="md-nav__link">
+      Shell scripting
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../advanced/advanced-text-editing/" title="Advanced Text Edit" class="md-nav__link">
+      Advanced Text Edit
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../virtual-machine-setting/" title="Virtual Machine" class="md-nav__link">
+      Virtual Machine
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#file-accessing" title="File Accessing" class="md-nav__link">
+    File Accessing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resource-checking" title="Resource checking" class="md-nav__link">
+    Resource checking
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-text-editing" title="Advanced Text editing" class="md-nav__link">
+    Advanced Text editing
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>File Operation</h1>
+                
+                <p>There is an important concept that <strong>all 'things' in Linux are considered as files</strong> - processes, physic memories, physic storage disks, pipelines, sockets are treaded as files. So accessing files is an important way to monitor and control your system.</p>
+<p>Comments for the table below :
+<em> <code>[options]</code> means the options in it are optional.
+</em> You can use <code>man command</code> to see the whole help document in your own computer.
+* <code>$parameter</code> means the parameter is mandatory.</p>
+<h4 id="file-accessing">File Accessing</h4>
+<table>
+<thead>
+<tr>
+<th>Commands</th>
+<th>Functionality</th>
+<th>Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ls [-trlRad] [path]</code></td>
+<td>list all files under <path> or current directory if <path> is not provided</td>
+<td><ul><li><code>ls -l</code> --&gt; List all files in current directory in <em>List Format</em> </li><li><code>ls -a ~</code> --&gt; List all files under <em><code>~(Home dir)</code></em> include hidden files(whose filenames start with '.')</li><li><code>ls -R ~</code> --&gt; List all files under folder <em><code>~</code></em> recursive, which means it will also show the files in the subfolders of <em>~</em> </li></ul></td>
+</tr>
+<tr>
+<td><code>cd [path]</code></td>
+<td>Change directory to the path you provided</td>
+<td><ul><li><code>cd ~</code> --&gt; change the directory to your Home dic</li><li><code>cd ..</code> --&gt; change directory to the parent folder of current folder </li><li><code>cd -</code> --&gt; change back to the last directory you just changed from </ul></td>
+</tr>
+<tr>
+<td><code>pwd</code></td>
+<td>Show current directory provided</td>
+<td><ul><li><code>pwd</code></li></ul></td>
+</tr>
+<tr>
+<td><code>mkdir [-p] [path]/$folder_name</code></td>
+<td>Create a folder</td>
+<td><ul><li><code>mkdir new_folder</code> --&gt; Create a folder named <em>new_folder</em> under current directory</li><li><code>mkdir ~/new_folder</code> --&gt; Create a folder named <em>new_folder</em> under your home directory</li><li><code>mkdir -p /new_folder01/new_folder02/new_folder03</code> --&gt; This will create parents(<em>/new_folder01/new_folder02</em>) folders if they are not existing </li></ul></td>
+</tr>
+<tr>
+<td><code>more $file_name</code></td>
+<td>Show the content of the file you provided <strong>page by page</strong></td>
+<td><ul><li><code>more /etc/passwd</code> --&gt; show the content of file <em>/etc/passwd</em> . You can hit space button to move down or <code>u</code> button to move up. </li></ul></td>
+</tr>
+<tr>
+<td><code>less $file_name</code></td>
+<td>Show the content of the file you provided <strong>page by page</strong></td>
+<td><ul><li><code>less /etc/passwd</code> --&gt; Same as <code>more</code> </li></ul></td>
+</tr>
+<tr>
+<td><code>cat $file_name</code></td>
+<td>Show the content of the file you provided all at once</td>
+<td><ul><li><code>cat /etc/passwd</code> --&gt; The result of this command is almost the same as <code>more</code>, but <code>cat</code> prints all content at once. </li></ul></td>
+</tr>
+<tr>
+<td><code>head [-1 or 2 or 3....] $file_name</code></td>
+<td>Only show the first n(1 or 2 or 3...) rows of the file you provided.</td>
+<td><ul><li><code>head -10 /etc/passwd</code> --&gt; Show the first 10 rows of file <em>/etc/passwd</em> </li></ul></td>
+</tr>
+<tr>
+<td><code>tail [-f][-1 or 2 or 3...] $file_name</code></td>
+<td>Only show the last n(1 or 2 or 3...) rows of the file.</td>
+<td><ul><li><code>tail -5 /etc/passwd</code> --&gt; Show the last 10 rows of file <em>/etc/passwd</em> </li><li><code>tail -f ~/.bash_profile</code> --&gt; Show the last 10 rows for <code>~/.bash_profile</code> and waiting, if the file is adding some other content at the same time through other sestion, this command will continue to print them out. This is very useful to monitor the log files of some running application.  </li></ul></td>
+</tr>
+<tr>
+<td><code>cp [-r] $source_file $target_file</code></td>
+<td>Copy a file to another path or name</td>
+<td><ul><li><code>cp ~/.bash_profile ~/new_file</code> --&gt; Copy file <code>~/.bash_profile</code> to <code>~/new_file</code> </li><li><code>cp -r /some/folder ~/</code> --&gt; <code>-r</code> is used to copy folders</li></ul></td>
+</tr>
+<tr>
+<td><code>mv $sourc_file $target_file</code></td>
+<td>Move and rename a file/folder to another path</td>
+<td><ul><li><code>touch ~/test_mv</code> <br/> <code>mv ~/test_mv ~/rename_mv</code><br/> --&gt; These commands will create a file named <code>test_mv</code> under your Home directory and rename it to <code>rename_mv</code> </li></ul></td>
+</tr>
+<tr>
+<td><code>rm [-rf] $file_name or $folder</code></td>
+<td>Delete files or folders from the server</td>
+<td><ul><li><code>touch ~/test_rm</code> <br/> <code>ls -l ~/test_tm</code> <br/> <code>rm ~/test_rm</code> <br/> This will Create a file named <code>test_rm</code> under your Home directory and remvoe it. </li></ul></td>
+</tr>
+<tr>
+<td><code>vi/vim $file_name</code></td>
+<td>Edit a text file</td>
+<td><ul><li><code>vim ~/.bash_profile</code> --&gt; Open(or new) file <code>~/.bash_profile</code> and you can edit it. The operations for vi/vim are powerful but not very easy for beginners. In most of the cases, you only need to some few commands of <a href="../../advanced/vim/">vi/vim</a>. </li></ul></td>
+</tr>
+<tr>
+<td><code>grep -[ei...] $pattern $filename</code></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="resource-checking">Resource checking</h4>
+<p>All resources can be monitored via commands in Linux.</p>
+<table>
+<thead>
+<tr>
+<th>Commands</th>
+<th>Functionality</th>
+<th>Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>du -sh $folder or $file</code></td>
+<td>Show the size of the folder or file with a proper unit.</td>
+<td><code>du -sh ~</code> --&gt; Show the size of your home directory</td>
+</tr>
+<tr>
+<td><code>top</code></td>
+<td>Full screen application to show the usage of memory/cpu etc.</td>
+<td><code>top</code></td>
+</tr>
+<tr>
+<td><code>df [-ah] [directory]</code></td>
+<td>Show the space usage of specific the directory mounts on(remember that all things in linux ar files?).</td>
+<td><code>df -ah</code> --&gt; Show all mount points in this system and the usage of their space. We will talk about <strong>mount</strong> later.</td>
+</tr>
+<tr>
+<td><code>ps [-ef]</code></td>
+<td>Show the processes running in the server</td>
+<td><code>ps -ef|grep usr</code> --&gt; This command will output all process on the system using standard syntax and then use pipline <code>|</code> to pass the result to <code>grep usr</code> which will only output the lines containing key word "<strong>usr</strong>"</td>
+</tr>
+<tr>
+<td><code>netstat -a</code></td>
+<td>Show all ports that are in use now.</td>
+<td><code>netstat -a|grep 80</code> --&gt; This command will first query all ports that are in use and then use <code>grep 80</code> to select lines that contains key word "<strong>80</strong>"</td>
+</tr>
+</tbody>
+</table>
+<h4 id="advanced-text-editing">Advanced Text editing</h4>
+<p>There are several powerful text editing tools that you can use in your script, but they need some more knowledge about <code>regular expression</code> , <code>streaming programming</code> and <code>redirect</code>.</p>
+<p>We will talk about it in the <a href="../../advanced/advanced-text-editing/">future</a>.</p>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../preparation/" title="Quick Start" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Quick Start
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../folder-structure/" title="Folder structure" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Folder structure
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application-6940329b9f.js"></script>
+      
+      
+      <script>app.initialize({url:{base:"../.."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>

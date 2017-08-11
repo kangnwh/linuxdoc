@@ -1,0 +1,590 @@
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <link rel="shortcut icon" href="../assets/images/favicon.png">
+      
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.8.1">
+    
+    
+      
+        <title>Virtual Machine - Linux Docs</title>
+      
+    
+    
+      <script src="../assets/javascripts/modernizr-1df76c4e58.js"></script>
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application-bfecc7305d.css">
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+      <link rel="stylesheet" href="../css/extra.css">
+    
+    
+  </head>
+  
+  
+  
+  
+    <body>
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <a href=".." title="Linux Docs" class="md-icon md-icon--home md-header-nav__button">
+          </a>
+        
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+            
+            Virtual Machine
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">close</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result" data-md-lang-search="" data-md-lang-tokenizer="[\s\-]+">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    
+      <i class="md-icon md-icon--home md-nav__button"></i>
+    
+    Linux Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Basic
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Basic
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../basic/preparation/" title="Quick Start" class="md-nav__link">
+      Quick Start
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../basic/file-operation/" title="File Operation" class="md-nav__link">
+      File Operation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../basic/folder-structure/" title="Folder structure" class="md-nav__link">
+      Folder structure
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../basic/user-account-management/" title="User Account Management" class="md-nav__link">
+      User Account Management
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../basic/performssion/" title="Performission Control" class="md-nav__link">
+      Performission Control
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Advanced
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Advanced
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../advanced/vim/" title="Basic Vim" class="md-nav__link">
+      Basic Vim
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../advanced/scripting/" title="Shell scripting" class="md-nav__link">
+      Shell scripting
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../advanced/advanced-text-editing/" title="Advanced Text Edit" class="md-nav__link">
+      Advanced Text Edit
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Virtual Machine
+      </label>
+    
+    <a href="./" title="Virtual Machine" class="md-nav__link md-nav__link--active">
+      Virtual Machine
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#softeware-needed" title="Softeware needed" class="md-nav__link">
+    Softeware needed
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linux-distribution-selection" title="Linux Distribution Selection" class="md-nav__link">
+    Linux Distribution Selection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" title="Installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-install-your-linux" title="How to install your Linux" class="md-nav__link">
+    How to install your Linux
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#softeware-needed" title="Softeware needed" class="md-nav__link">
+    Softeware needed
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linux-distribution-selection" title="Linux Distribution Selection" class="md-nav__link">
+    Linux Distribution Selection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" title="Installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-install-your-linux" title="How to install your Linux" class="md-nav__link">
+    How to install your Linux
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="how-to-set-your-linux-virtual-machine">How to set your Linux virtual machine</h1>
+<p>This chapter will introduce how to set up a Linux(CentOS) virtual machine in your own laptop.</p>
+<h4 id="softeware-needed">Softeware needed</h4>
+<p>There are several free virtual machine softwares while I recommend you below two:<br />
+- <a href="https://www.vmware.com/products/player/playerpro-evaluation.html">vmplayer</a>
+- <a href="https://www.virtualbox.org/wiki/Downloads">VirtualBox</a></p>
+<h4 id="linux-distribution-selection">Linux Distribution Selection</h4>
+<p>I recommend you use CentOS 7 for you learning<br />
+<a name="img"></a><br />
+<a href="http://isoredirect.centos.org/centos/7/isos/x86_64/CentOS-7-x86_64-Minimal-1611.iso">CentOS 7 Img Download</a></p>
+<p>This chapter will take <code>VirtualBox</code> for virtual machine software and <code>CentOS 7</code> for OS as an example.</p>
+<h4 id="installation">Installation</h4>
+<p>Just follow the guidance of the software.  </p>
+<h4 id="how-to-install-your-linux">How to install your Linux</h4>
+<p>Here we just install a minimal system <strong>without any graph interface</strong>. In this way, you will be forced to only use commands for all tasks.  </p>
+<ul>
+<li>Open your virtualbox  </li>
+<li>
+<p>New a virtual machine<br />
+<img alt="Screenshot" src="../img/vm01.png" />  </p>
+</li>
+<li>
+<p>Name it whatever you want and select the type and version of OS you want to install
+<img alt="Screenshot" src="../img/vm02.png" /></p>
+</li>
+<li>
+<p>Assign the amount of memory you want to assign to the virtual system. I think 768MB is enough for our learning.
+<img alt="Screenshot" src="../img/vm03.png" /></p>
+</li>
+<li>
+<p>Create a virtual hard disk for your system(this will be a file/or several files stored on your physical disk which contain(s) all things of your VM)
+<img alt="Screenshot" src="../img/vm04.png" /></p>
+</li>
+<li>
+<p>Choose virutal disk type(as we only use this VM on VirtualBox, we can use the default type)
+<img alt="Screenshot" src="../img/vm05.png" /></p>
+</li>
+<li>
+<p>Always choose <code>Dynamically allocated</code>. In this way, the VM disk file will start with a very small size and increases to a top size you will specific in the next step.
+<img alt="Screenshot" src="../img/vm06.png" /></p>
+</li>
+<li>
+<p>Choose the <code>max size</code> of your VM disk
+<img alt="Screenshot" src="../img/vm07.png" /></p>
+</li>
+</ul>
+<p><em>Now we have a virtul machine without any OS in it, which means we cannot communicate with it. Let's install CentOS 7 in this VM.</em>  </p>
+<ul>
+<li>
+<p>Right click the VM you just created and open <code>settings</code> panel.
+<img alt="Screenshot" src="../img/vm08.png" /></p>
+</li>
+<li>
+<p>Change to <code>Storage</code> tap and set the <code>Controller:IDE</code> to the path where you store your <a href="#img">CentOS img</a> you just downloaded.
+<img alt="Screenshot" src="../img/vm09.png" /></p>
+</li>
+<li>
+<p>Now you can start your VM. Select the VM and click <code>Start</code> at the top right.
+<img alt="Screenshot" src="../img/vm08.png" /></p>
+</li>
+<li>
+<p>After a few seconds, the installation process will begin.</p>
+</li>
+<li>
+<p>Use your keyboard <code>Up</code> and <code>Down</code> and choose <code>Install CentOS 7</code> and click <code>Return</code> button on your keybaord.
+<img alt="Screenshot" src="../img/vm10.0.png" /></p>
+</li>
+<li>
+<p>Select <code>INSTALLATION DESTINATION</code> and do some settings.
+<img alt="Screenshot" src="../img/vm10.png" /></p>
+</li>
+<li>
+<p>Select <code>AUtomatically configure partitioning</code> on the bottom and click <code>Done</code> on the very top.
+<img alt="Screenshot" src="../img/vm11.png" /></p>
+</li>
+<li>
+<p>Click <code>Begin Installation</code>
+<img alt="Screenshot" src="../img/vm12.png" /></p>
+</li>
+<li>
+<p>Set password for your root user(<strong>root is the super Administrator user accound and has full permission on your Linux</strong>)
+<img alt="Screenshot" src="../img/vm13.png" /></p>
+</li>
+<li>
+<p>Set the password for root.
+<img alt="Screenshot" src="../img/vm14.png" /></p>
+</li>
+<li>
+<p>Create another user account if you want.
+<img alt="Screenshot" src="../img/vm15.png" /></p>
+</li>
+<li>
+<p>Finish your configuration
+<img alt="Screenshot" src="../img/vm16.png" /></p>
+</li>
+<li>
+<p>Reboot
+<img alt="Screenshot" src="../img/vm17.png" /></p>
+</li>
+<li>
+<p>Now you have your own Linux, use your account settle just now and you can practise your Linux skills.
+<img alt="Screenshot" src="../img/vm18.png" /></p>
+</li>
+</ul>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../advanced/advanced-text-editing/" title="Advanced Text Edit" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Advanced Text Edit
+              </span>
+            </div>
+          </a>
+        
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application-6940329b9f.js"></script>
+      
+      
+      <script>app.initialize({url:{base:".."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>

@@ -1,0 +1,139 @@
+{
+    "docs": [
+        {
+            "location": "/",
+            "text": "Welcome to Self-Learning Site\n\n\nhosted by \nEric Kang\n\nrecommand \nUniMelb Forum Web\n for UniMelb students\n\n\nAbout this tutorial\n  \n\n\nThis tutorial will give a brief description about Linux and Shell.\n\n\nBefore learning this chapter, you should...\n  \n\n\n\n\nKnow how to power on your computer  \n\n\nKnow how to input words through your keyboard  \n\n\nKnow how to use mouse/touchpad of your computer  \n\n\nKnow how to surfing internet  \n\n\n\n\nAfter this chapter, you can...\n  \n\n\n\n\nSet up virtual machine on your computer  \n\n\nThe basic structure of Linux  \n\n\nCommon Linux Commands  \n\n\nBasic System Administrator Skills  \n\n\nBasic Shell programming  \n\n\n\n\nPractice\n  \n\n\n\n\nConfig ssh login(between different servers) without password  \n\n\nSet up mysql server  \n\n\nWrite a script to upload/submit/verify your java homework in one step",
+            "title": "Home"
+        },
+        {
+            "location": "/#welcome-to-self-learning-site",
+            "text": "hosted by  Eric Kang \nrecommand  UniMelb Forum Web  for UniMelb students  About this tutorial     This tutorial will give a brief description about Linux and Shell.  Before learning this chapter, you should...      Know how to power on your computer    Know how to input words through your keyboard    Know how to use mouse/touchpad of your computer    Know how to surfing internet     After this chapter, you can...      Set up virtual machine on your computer    The basic structure of Linux    Common Linux Commands    Basic System Administrator Skills    Basic Shell programming     Practice      Config ssh login(between different servers) without password    Set up mysql server    Write a script to upload/submit/verify your java homework in one step",
+            "title": "Welcome to Self-Learning Site"
+        },
+        {
+            "location": "/basic/preparation/",
+            "text": "If you use \nWindows system\n, please choose one of  3 ways below:\n  \n\n\nIf you use \nMacOS\n, I also recommend you to set up an virtual environment for your learning because it can protect your computer from being crashed:\n\n\n\n\n\n\nUse another remote server.\n\n\n\n\n\n\nRefer to \nVirtual Machine\n to set up a virtual Linux environment.(Recommanded)\n\n\n\n\n\n\nUsing a online Linux emulator system, such as \nthis\n (Not recommanded)\n\n\n\n\n\n\nLet's begin from the most common ones:  \n\n\nPreparation\n\n\nYou need a software which can connect with your Linux server via SSH protocol so that you can * \n control \n * your Linux just using commands.\n\n\n\n\nSSH like Windows Remote Controller - You can use SSH & Shell commands to control your server.\n\n\n\n\n\n\nIf you use Windows systems, you may need \nPuTTY\n or something you like to connect to the server\n\n\nIf you use MacOS, just open your \nTerminal\n (if you do not know how to open it, you may be not prepared for this document...)\n\n\nIf you *unix systems, you may not need to go through this document...\n\n\n\n\n something like this: \n\n\n\n\nThere are 3 areas marked in the picture. All this information can be changed if you update the environment variable \nPS1\n, which we will discuss it in the next section.\n\n\nEnvironment Variables\n\n\nLots of configurations of Linux are controlled by \nenvironment variables\n. A simple example is the one we mentioned above - the shell prompt:\n\n\n    eric@LabServer:~ %  \n      # eric : the current login user\n      # LabzServer : the server hostname\n      # ~ : the working directory (~ means the home directory of the current user)\n\n\n\n\nThis appearance is controlled by an environment variable - \nPS1\n.\nOK, let's make it something cool:\n\n\nexport PS1=\"------ This is my computer ! Don't touch ! ----- \"\n\n\n\n\n Now we get: \n\n\n\n\nWhat if we want something dynamic? Such as we want to see the date and the sequence number of our command in this section?\n\n\n Example \n\n\nexport PS1=\"Today:\\d ||User: \\u || Command# :\\# \"  \n    # \\d -> Show current date\n    # \\u -> Show current user\n    # \\# -> Show the sequence number of commands in this section\n\n\n\n\n\n\n\nLet me explain what happens:\n\n1. \nexport\n -> this key word indicates that the variable   assignment operation also works in its parent process(it is a little complex, we will talk about it in Script section)\n\n2. \nPS1=\"Today:\\d ||User: \\u || Command# :\\# \"\n -> This is an assignment:\n\n\n\n\n\n\n\"Today:..||User:...|| Command#\" :-->These words are normal words, just as what they are showing  \n\n\n\\d --> A placeholder that tells Linux to put current date here.  \n\n\n\\u --> A placeholder that tells Linux to put current username here.  \n\n\n# --> A placeholder that tells Linux to put the command sequence number of this section.  \n\n\n\n\n\n\nYou can reference \nhere\n for more information about the placeholders in \nPS1\n variable.\n\n\n Lots of other variables can be found \n\nUse command showing below to have a big picture about what kinds of environment variables you may have:\n\n\nprintenv\n\n\n\n\nThis command will print all variables at once but you may have some problems on scrolling up/down. Try this:\n\n\nprintenv|more\n\n\n\n\n\n\n|\n symbol is a \npipline\n, which can pass the output of previous one to the next one.In this case, the output of \nprintenv\n will be passed to \nmore\n\n\nmore\n is command to print content of files \n pages by pages \n . So that you will see the picture showing below and you can just hit blank for next page:",
+            "title": "Quick Start"
+        },
+        {
+            "location": "/basic/preparation/#preparation",
+            "text": "You need a software which can connect with your Linux server via SSH protocol so that you can *   control   * your Linux just using commands.   SSH like Windows Remote Controller - You can use SSH & Shell commands to control your server.    If you use Windows systems, you may need  PuTTY  or something you like to connect to the server  If you use MacOS, just open your  Terminal  (if you do not know how to open it, you may be not prepared for this document...)  If you *unix systems, you may not need to go through this document...    something like this:    There are 3 areas marked in the picture. All this information can be changed if you update the environment variable  PS1 , which we will discuss it in the next section.",
+            "title": "Preparation"
+        },
+        {
+            "location": "/basic/preparation/#environment-variables",
+            "text": "Lots of configurations of Linux are controlled by  environment variables . A simple example is the one we mentioned above - the shell prompt:      eric@LabServer:~ %  \n      # eric : the current login user\n      # LabzServer : the server hostname\n      # ~ : the working directory (~ means the home directory of the current user)  This appearance is controlled by an environment variable -  PS1 .\nOK, let's make it something cool:  export PS1=\"------ This is my computer ! Don't touch ! ----- \"   Now we get:    What if we want something dynamic? Such as we want to see the date and the sequence number of our command in this section?   Example   export PS1=\"Today:\\d ||User: \\u || Command# :\\# \"  \n    # \\d -> Show current date\n    # \\u -> Show current user\n    # \\# -> Show the sequence number of commands in this section   Let me explain what happens: \n1.  export  -> this key word indicates that the variable   assignment operation also works in its parent process(it is a little complex, we will talk about it in Script section) \n2.  PS1=\"Today:\\d ||User: \\u || Command# :\\# \"  -> This is an assignment:    \"Today:..||User:...|| Command#\" :-->These words are normal words, just as what they are showing    \\d --> A placeholder that tells Linux to put current date here.    \\u --> A placeholder that tells Linux to put current username here.    # --> A placeholder that tells Linux to put the command sequence number of this section.      You can reference  here  for more information about the placeholders in  PS1  variable.   Lots of other variables can be found  \nUse command showing below to have a big picture about what kinds of environment variables you may have:  printenv  This command will print all variables at once but you may have some problems on scrolling up/down. Try this:  printenv|more   |  symbol is a  pipline , which can pass the output of previous one to the next one.In this case, the output of  printenv  will be passed to  more  more  is command to print content of files   pages by pages   . So that you will see the picture showing below and you can just hit blank for next page:",
+            "title": "Environment Variables"
+        },
+        {
+            "location": "/basic/file-operation/",
+            "text": "There is an important concept that \nall 'things' in Linux are considered as files\n - processes, physic memories, physic storage disks, pipelines, sockets are treaded as files. So accessing files is an important way to monitor and control your system.\n\n\nComments for the table below :\n\n \n[options]\n means the options in it are optional.\n\n You can use \nman command\n to see the whole help document in your own computer.\n* \n$parameter\n means the parameter is mandatory.\n\n\nFile Accessing\n\n\n\n\n\n\n\n\nCommands\n\n\nFunctionality\n\n\nExamples\n\n\n\n\n\n\n\n\n\n\nls [-trlRad] [path]\n\n\nlist all files under \n or current directory if \n is not provided\n\n\nls -l\n --> List all files in current directory in \nList Format\n \nls -a ~\n --> List all files under \n~(Home dir)\n include hidden files(whose filenames start with '.')\nls -R ~\n --> List all files under folder \n~\n recursive, which means it will also show the files in the subfolders of \n~\n \n\n\n\n\n\n\ncd [path]\n\n\nChange directory to the path you provided\n\n\ncd ~\n --> change the directory to your Home dic\ncd ..\n --> change directory to the parent folder of current folder \ncd -\n --> change back to the last directory you just changed from \n\n\n\n\n\n\npwd\n\n\nShow current directory provided\n\n\npwd\n\n\n\n\n\n\nmkdir [-p] [path]/$folder_name\n\n\nCreate a folder\n\n\nmkdir new_folder\n --> Create a folder named \nnew_folder\n under current directory\nmkdir ~/new_folder\n --> Create a folder named \nnew_folder\n under your home directory\nmkdir -p /new_folder01/new_folder02/new_folder03\n --> This will create parents(\n/new_folder01/new_folder02\n) folders if they are not existing \n\n\n\n\n\n\nmore $file_name\n\n\nShow the content of the file you provided \npage by page\n\n\nmore /etc/passwd\n --> show the content of file \n/etc/passwd\n . You can hit space button to move down or \nu\n button to move up. \n\n\n\n\n\n\nless $file_name\n\n\nShow the content of the file you provided \npage by page\n\n\nless /etc/passwd\n --> Same as \nmore\n \n\n\n\n\n\n\ncat $file_name\n\n\nShow the content of the file you provided all at once\n\n\ncat /etc/passwd\n --> The result of this command is almost the same as \nmore\n, but \ncat\n prints all content at once. \n\n\n\n\n\n\nhead [-1 or 2 or 3....] $file_name\n\n\nOnly show the first n(1 or 2 or 3...) rows of the file you provided.\n\n\nhead -10 /etc/passwd\n --> Show the first 10 rows of file \n/etc/passwd\n \n\n\n\n\n\n\ntail [-f][-1 or 2 or 3...] $file_name\n\n\nOnly show the last n(1 or 2 or 3...) rows of the file.\n\n\ntail -5 /etc/passwd\n --> Show the last 10 rows of file \n/etc/passwd\n \ntail -f ~/.bash_profile\n --> Show the last 10 rows for \n~/.bash_profile\n and waiting, if the file is adding some other content at the same time through other sestion, this command will continue to print them out. This is very useful to monitor the log files of some running application.  \n\n\n\n\n\n\ncp [-r] $source_file $target_file\n\n\nCopy a file to another path or name\n\n\ncp ~/.bash_profile ~/new_file\n --> Copy file \n~/.bash_profile\n to \n~/new_file\n \ncp -r /some/folder ~/\n --> \n-r\n is used to copy folders\n\n\n\n\n\n\nmv $sourc_file $target_file\n\n\nMove and rename a file/folder to another path\n\n\ntouch ~/test_mv\n \n \nmv ~/test_mv ~/rename_mv\n --> These commands will create a file named \ntest_mv\n under your Home directory and rename it to \nrename_mv\n \n\n\n\n\n\n\nrm [-rf] $file_name or $folder\n\n\nDelete files or folders from the server\n\n\ntouch ~/test_rm\n \n \nls -l ~/test_tm\n \n \nrm ~/test_rm\n \n This will Create a file named \ntest_rm\n under your Home directory and remvoe it. \n\n\n\n\n\n\nvi/vim $file_name\n\n\nEdit a text file\n\n\nvim ~/.bash_profile\n --> Open(or new) file \n~/.bash_profile\n and you can edit it. The operations for vi/vim are powerful but not very easy for beginners. In most of the cases, you only need to some few commands of \nvi/vim\n. \n\n\n\n\n\n\ngrep -[ei...] $pattern $filename\n\n\n\n\n\n\n\n\n\n\n\n\nResource checking\n\n\nAll resources can be monitored via commands in Linux.\n\n\n\n\n\n\n\n\nCommands\n\n\nFunctionality\n\n\nExamples\n\n\n\n\n\n\n\n\n\n\ndu -sh $folder or $file\n\n\nShow the size of the folder or file with a proper unit.\n\n\ndu -sh ~\n --> Show the size of your home directory\n\n\n\n\n\n\ntop\n\n\nFull screen application to show the usage of memory/cpu etc.\n\n\ntop\n\n\n\n\n\n\ndf [-ah] [directory]\n\n\nShow the space usage of specific the directory mounts on(remember that all things in linux ar files?).\n\n\ndf -ah\n --> Show all mount points in this system and the usage of their space. We will talk about \nmount\n later.\n\n\n\n\n\n\nps [-ef]\n\n\nShow the processes running in the server\n\n\nps -ef|grep usr\n --> This command will output all process on the system using standard syntax and then use pipline \n|\n to pass the result to \ngrep usr\n which will only output the lines containing key word \"\nusr\n\"\n\n\n\n\n\n\nnetstat -a\n\n\nShow all ports that are in use now.\n\n\nnetstat -a|grep 80\n --> This command will first query all ports that are in use and then use \ngrep 80\n to select lines that contains key word \"\n80\n\"\n\n\n\n\n\n\n\n\nAdvanced Text editing\n\n\nThere are several powerful text editing tools that you can use in your script, but they need some more knowledge about \nregular expression\n , \nstreaming programming\n and \nredirect\n.\n\n\nWe will talk about it in the \nfuture\n.",
+            "title": "File Operation"
+        },
+        {
+            "location": "/basic/file-operation/#file-accessing",
+            "text": "Commands  Functionality  Examples      ls [-trlRad] [path]  list all files under   or current directory if   is not provided  ls -l  --> List all files in current directory in  List Format   ls -a ~  --> List all files under  ~(Home dir)  include hidden files(whose filenames start with '.') ls -R ~  --> List all files under folder  ~  recursive, which means it will also show the files in the subfolders of  ~      cd [path]  Change directory to the path you provided  cd ~  --> change the directory to your Home dic cd ..  --> change directory to the parent folder of current folder  cd -  --> change back to the last directory you just changed from     pwd  Show current directory provided  pwd    mkdir [-p] [path]/$folder_name  Create a folder  mkdir new_folder  --> Create a folder named  new_folder  under current directory mkdir ~/new_folder  --> Create a folder named  new_folder  under your home directory mkdir -p /new_folder01/new_folder02/new_folder03  --> This will create parents( /new_folder01/new_folder02 ) folders if they are not existing     more $file_name  Show the content of the file you provided  page by page  more /etc/passwd  --> show the content of file  /etc/passwd  . You can hit space button to move down or  u  button to move up.     less $file_name  Show the content of the file you provided  page by page  less /etc/passwd  --> Same as  more      cat $file_name  Show the content of the file you provided all at once  cat /etc/passwd  --> The result of this command is almost the same as  more , but  cat  prints all content at once.     head [-1 or 2 or 3....] $file_name  Only show the first n(1 or 2 or 3...) rows of the file you provided.  head -10 /etc/passwd  --> Show the first 10 rows of file  /etc/passwd      tail [-f][-1 or 2 or 3...] $file_name  Only show the last n(1 or 2 or 3...) rows of the file.  tail -5 /etc/passwd  --> Show the last 10 rows of file  /etc/passwd   tail -f ~/.bash_profile  --> Show the last 10 rows for  ~/.bash_profile  and waiting, if the file is adding some other content at the same time through other sestion, this command will continue to print them out. This is very useful to monitor the log files of some running application.      cp [-r] $source_file $target_file  Copy a file to another path or name  cp ~/.bash_profile ~/new_file  --> Copy file  ~/.bash_profile  to  ~/new_file   cp -r /some/folder ~/  -->  -r  is used to copy folders    mv $sourc_file $target_file  Move and rename a file/folder to another path  touch ~/test_mv     mv ~/test_mv ~/rename_mv  --> These commands will create a file named  test_mv  under your Home directory and rename it to  rename_mv      rm [-rf] $file_name or $folder  Delete files or folders from the server  touch ~/test_rm     ls -l ~/test_tm     rm ~/test_rm    This will Create a file named  test_rm  under your Home directory and remvoe it.     vi/vim $file_name  Edit a text file  vim ~/.bash_profile  --> Open(or new) file  ~/.bash_profile  and you can edit it. The operations for vi/vim are powerful but not very easy for beginners. In most of the cases, you only need to some few commands of  vi/vim .     grep -[ei...] $pattern $filename",
+            "title": "File Accessing"
+        },
+        {
+            "location": "/basic/file-operation/#resource-checking",
+            "text": "All resources can be monitored via commands in Linux.     Commands  Functionality  Examples      du -sh $folder or $file  Show the size of the folder or file with a proper unit.  du -sh ~  --> Show the size of your home directory    top  Full screen application to show the usage of memory/cpu etc.  top    df [-ah] [directory]  Show the space usage of specific the directory mounts on(remember that all things in linux ar files?).  df -ah  --> Show all mount points in this system and the usage of their space. We will talk about  mount  later.    ps [-ef]  Show the processes running in the server  ps -ef|grep usr  --> This command will output all process on the system using standard syntax and then use pipline  |  to pass the result to  grep usr  which will only output the lines containing key word \" usr \"    netstat -a  Show all ports that are in use now.  netstat -a|grep 80  --> This command will first query all ports that are in use and then use  grep 80  to select lines that contains key word \" 80 \"",
+            "title": "Resource checking"
+        },
+        {
+            "location": "/basic/file-operation/#advanced-text-editing",
+            "text": "There are several powerful text editing tools that you can use in your script, but they need some more knowledge about  regular expression  ,  streaming programming  and  redirect .  We will talk about it in the  future .",
+            "title": "Advanced Text editing"
+        },
+        {
+            "location": "/basic/folder-structure/",
+            "text": "Coming soon ...\n\n\n\n\n\n\nProvide your comment <\nhere\n>",
+            "title": "Folder structure"
+        },
+        {
+            "location": "/basic/folder-structure/#coming-soon",
+            "text": "Provide your comment < here >",
+            "title": "Coming soon ..."
+        },
+        {
+            "location": "/basic/user-account-management/",
+            "text": "Coming soon ...\n\n\n\n\n\n\nProvide your comment <\nhere\n>",
+            "title": "User Account Management"
+        },
+        {
+            "location": "/basic/user-account-management/#coming-soon",
+            "text": "Provide your comment < here >",
+            "title": "Coming soon ..."
+        },
+        {
+            "location": "/basic/performssion/",
+            "text": "Coming soon ...\n\n\n\n\n\n\nProvide your comment <\nhere\n>",
+            "title": "Performission Control"
+        },
+        {
+            "location": "/basic/performssion/#coming-soon",
+            "text": "Provide your comment < here >",
+            "title": "Coming soon ..."
+        },
+        {
+            "location": "/advanced/vim/",
+            "text": "Coming soon ...\n\n\n\n\n\n\nProvide your comment <\nhere\n>",
+            "title": "Basic Vim"
+        },
+        {
+            "location": "/advanced/vim/#coming-soon",
+            "text": "Provide your comment < here >",
+            "title": "Coming soon ..."
+        },
+        {
+            "location": "/advanced/scripting/",
+            "text": "Coming soon ...\n\n\n\n\n\n\nProvide your comment <\nhere\n>",
+            "title": "Shell scripting"
+        },
+        {
+            "location": "/advanced/scripting/#coming-soon",
+            "text": "Provide your comment < here >",
+            "title": "Coming soon ..."
+        },
+        {
+            "location": "/advanced/advanced-text-editing/",
+            "text": "Coming soon ...\n\n\n\n\n\n\nProvide your comment <\nhere\n>",
+            "title": "Advanced Text Edit"
+        },
+        {
+            "location": "/advanced/advanced-text-editing/#coming-soon",
+            "text": "Provide your comment < here >",
+            "title": "Coming soon ..."
+        },
+        {
+            "location": "/virtual-machine-setting/",
+            "text": "How to set your Linux virtual machine\n\n\nThis chapter will introduce how to set up a Linux(CentOS) virtual machine in your own laptop.\n\n\nSofteware needed\n\n\nThere are several free virtual machine softwares while I recommend you below two:\n\n- \nvmplayer\n\n- \nVirtualBox\n\n\nLinux Distribution Selection\n\n\nI recommend you use CentOS 7 for you learning\n\n\n\n\nCentOS 7 Img Download\n\n\nThis chapter will take \nVirtualBox\n for virtual machine software and \nCentOS 7\n for OS as an example.\n\n\nInstallation\n\n\nJust follow the guidance of the software.  \n\n\nHow to install your Linux\n\n\nHere we just install a minimal system \nwithout any graph interface\n. In this way, you will be forced to only use commands for all tasks.  \n\n\n\n\nOpen your virtualbox  \n\n\n\n\nNew a virtual machine\n\n\n  \n\n\n\n\n\n\nName it whatever you want and select the type and version of OS you want to install\n\n\n\n\n\n\n\nAssign the amount of memory you want to assign to the virtual system. I think 768MB is enough for our learning.\n\n\n\n\n\n\n\nCreate a virtual hard disk for your system(this will be a file/or several files stored on your physical disk which contain(s) all things of your VM)\n\n\n\n\n\n\n\nChoose virutal disk type(as we only use this VM on VirtualBox, we can use the default type)\n\n\n\n\n\n\n\nAlways choose \nDynamically allocated\n. In this way, the VM disk file will start with a very small size and increases to a top size you will specific in the next step.\n\n\n\n\n\n\n\nChoose the \nmax size\n of your VM disk\n\n\n\n\n\n\n\nNow we have a virtul machine without any OS in it, which means we cannot communicate with it. Let's install CentOS 7 in this VM.\n  \n\n\n\n\n\n\nRight click the VM you just created and open \nsettings\n panel.\n\n\n\n\n\n\n\nChange to \nStorage\n tap and set the \nController:IDE\n to the path where you store your \nCentOS img\n you just downloaded.\n\n\n\n\n\n\n\nNow you can start your VM. Select the VM and click \nStart\n at the top right.\n\n\n\n\n\n\n\nAfter a few seconds, the installation process will begin.\n\n\n\n\n\n\nUse your keyboard \nUp\n and \nDown\n and choose \nInstall CentOS 7\n and click \nReturn\n button on your keybaord.\n\n\n\n\n\n\n\nSelect \nINSTALLATION DESTINATION\n and do some settings.\n\n\n\n\n\n\n\nSelect \nAUtomatically configure partitioning\n on the bottom and click \nDone\n on the very top.\n\n\n\n\n\n\n\nClick \nBegin Installation\n\n\n\n\n\n\n\n\nSet password for your root user(\nroot is the super Administrator user accound and has full permission on your Linux\n)\n\n\n\n\n\n\n\nSet the password for root.\n\n\n\n\n\n\n\nCreate another user account if you want.\n\n\n\n\n\n\n\nFinish your configuration\n\n\n\n\n\n\n\nReboot\n\n\n\n\n\n\n\nNow you have your own Linux, use your account settle just now and you can practise your Linux skills.",
+            "title": "Virtual Machine"
+        },
+        {
+            "location": "/virtual-machine-setting/#how-to-set-your-linux-virtual-machine",
+            "text": "This chapter will introduce how to set up a Linux(CentOS) virtual machine in your own laptop.",
+            "title": "How to set your Linux virtual machine"
+        },
+        {
+            "location": "/virtual-machine-setting/#softeware-needed",
+            "text": "There are several free virtual machine softwares while I recommend you below two: \n-  vmplayer \n-  VirtualBox",
+            "title": "Softeware needed"
+        },
+        {
+            "location": "/virtual-machine-setting/#linux-distribution-selection",
+            "text": "I recommend you use CentOS 7 for you learning   CentOS 7 Img Download  This chapter will take  VirtualBox  for virtual machine software and  CentOS 7  for OS as an example.",
+            "title": "Linux Distribution Selection"
+        },
+        {
+            "location": "/virtual-machine-setting/#installation",
+            "text": "Just follow the guidance of the software.",
+            "title": "Installation"
+        },
+        {
+            "location": "/virtual-machine-setting/#how-to-install-your-linux",
+            "text": "Here we just install a minimal system  without any graph interface . In this way, you will be forced to only use commands for all tasks.     Open your virtualbox     New a virtual machine        Name it whatever you want and select the type and version of OS you want to install    Assign the amount of memory you want to assign to the virtual system. I think 768MB is enough for our learning.    Create a virtual hard disk for your system(this will be a file/or several files stored on your physical disk which contain(s) all things of your VM)    Choose virutal disk type(as we only use this VM on VirtualBox, we can use the default type)    Always choose  Dynamically allocated . In this way, the VM disk file will start with a very small size and increases to a top size you will specific in the next step.    Choose the  max size  of your VM disk    Now we have a virtul machine without any OS in it, which means we cannot communicate with it. Let's install CentOS 7 in this VM.       Right click the VM you just created and open  settings  panel.    Change to  Storage  tap and set the  Controller:IDE  to the path where you store your  CentOS img  you just downloaded.    Now you can start your VM. Select the VM and click  Start  at the top right.    After a few seconds, the installation process will begin.    Use your keyboard  Up  and  Down  and choose  Install CentOS 7  and click  Return  button on your keybaord.    Select  INSTALLATION DESTINATION  and do some settings.    Select  AUtomatically configure partitioning  on the bottom and click  Done  on the very top.    Click  Begin Installation     Set password for your root user( root is the super Administrator user accound and has full permission on your Linux )    Set the password for root.    Create another user account if you want.    Finish your configuration    Reboot    Now you have your own Linux, use your account settle just now and you can practise your Linux skills.",
+            "title": "How to install your Linux"
+        }
+    ]
+}
