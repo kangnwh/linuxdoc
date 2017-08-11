@@ -1,0 +1,19 @@
+site_name: Linux Docs
+pages:
+  - Home: index.md
+  - Basic:
+    - Quick Start: 'basic/preparation.md'
+    - File Operation: 'basic/file-operation.md'
+    - Folder structure : 'basic/folder-structure.md'
+    - User Account Management : 'basic/user-account-management.md'
+    - Performission Control : 'basic/performssion.md'
+  - Advanced:
+    - Basic Vim: advanced/vim.md
+    - Shell scripting : advanced/scripting.md
+    - Advanced Text Edit: advanced/advanced-text-editing.md
+  - Virtual Machine: virtual-machine-setting.md
+
+theme: material
+
+extra_css:
+    - css/extra.css
