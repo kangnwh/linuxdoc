@@ -4,7 +4,7 @@
     
     <url>
      <loc>/</loc>
-     <lastmod>2017-08-11</lastmod>
+     <lastmod>2017-08-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -13,31 +13,31 @@
         
     <url>
      <loc>/basic/preparation/</loc>
-     <lastmod>2017-08-11</lastmod>
+     <lastmod>2017-08-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/basic/file-operation/</loc>
-     <lastmod>2017-08-11</lastmod>
+     <lastmod>2017-08-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/basic/folder-structure/</loc>
-     <lastmod>2017-08-11</lastmod>
+     <lastmod>2017-08-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/basic/user-account-management/</loc>
-     <lastmod>2017-08-11</lastmod>
+     <lastmod>2017-08-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/basic/performssion/</loc>
-     <lastmod>2017-08-11</lastmod>
+     <lastmod>2017-08-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -47,19 +47,19 @@
         
     <url>
      <loc>/advanced/vim/</loc>
-     <lastmod>2017-08-11</lastmod>
+     <lastmod>2017-08-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/advanced/scripting/</loc>
-     <lastmod>2017-08-11</lastmod>
+     <lastmod>2017-08-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>/advanced/advanced-text-editing/</loc>
-     <lastmod>2017-08-11</lastmod>
+     <lastmod>2017-08-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
@@ -67,8 +67,8 @@
 
     
     <url>
-     <loc>/virtual-machine-setting/</loc>
-     <lastmod>2017-08-11</lastmod>
+     <loc>/vm/virtual-machine-setting/</loc>
+     <lastmod>2017-08-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
