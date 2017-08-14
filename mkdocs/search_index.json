@@ -108,7 +108,7 @@
         {
             "location": "/vm/virtual-machine-setting/",
             "text": "How to set your Linux virtual machine\n\n\nThis chapter will introduce how to set up a Linux(CentOS) virtual machine in your own laptop.\n\n\nSofteware needed\n\n\nThere are several free virtual machine softwares while I recommend you below two:\n\n- \nvmplayer\n\n- \nVirtualBox\n\n\nLinux Distribution Selection\n\n\nI recommend you use CentOS 7 for you learning\n\n\n\n\nCentOS 7 Img Download\n\n\nThis chapter will take \nVirtualBox\n for virtual machine software and \nCentOS 7\n for OS as an example.\n\n\nInstallation\n\n\nJust follow the guidance of the software.  \n\n\nHow to install your Linux\n\n\nHere we just install a minimal system \nwithout any graph interface\n. In this way, you will be forced to only use commands for all tasks.  \n\n\n\n\nOpen your virtualbox  \n\n\n\n\nNew a virtual machine\n\n\n  \n\n\n\n\n\n\nName it whatever you want and select the type and version of OS you want to install\n\n\n\n\n\n\n\nAssign the amount of memory you want to assign to the virtual system. I think 768MB is enough for our learning.\n\n\n\n\n\n\n\nCreate a virtual hard disk for your system(this will be a file/or several files stored on your physical disk which contain(s) all things of your VM)\n\n\n\n\n\n\n\nChoose virutal disk type(as we only use this VM on VirtualBox, we can use the default type)\n\n\n\n\n\n\n\nAlways choose \nDynamically allocated\n. In this way, the VM disk file will start with a very small size and increases to a top size you will specific in the next step.\n\n\n\n\n\n\n\nChoose the \nmax size\n of your VM disk\n\n\n\n\n\n\n\nNow we have a virtul machine without any OS in it, which means we cannot communicate with it. Let's install CentOS 7 in this VM.\n  \n\n\n\n\n\n\nRight click the VM you just created and open \nsettings\n panel.\n\n\n\n\n\n\n\nChange to \nStorage\n tap and set the \nController:IDE\n to the path where you store your \nCentOS img\n you just downloaded.\n\n\n\n\n\n\n\nNow you can start your VM. Select the VM and click \nStart\n at the top right.\n\n\n\n\n\n\n\nAfter a few seconds, the installation process will begin.\n\n\n\n\n\n\nUse your keyboard \nUp\n and \nDown\n and choose \nInstall CentOS 7\n and click \nReturn\n button on your keybaord.\n\n\n\n\n\n\n\nSelect \nINSTALLATION DESTINATION\n and do some settings.\n\n\n\n\n\n\n\nSelect \nAUtomatically configure partitioning\n on the bottom and click \nDone\n on the very top.\n\n\n\n\n\n\n\nClick \nBegin Installation\n\n\n\n\n\n\n\n\nSet password for your root user(\nroot is the super Administrator user accound and has full permission on your Linux\n)\n\n\n\n\n\n\n\nSet the password for root.\n\n\n\n\n\n\n\nCreate another user account if you want.\n\n\n\n\n\n\n\nFinish your configuration\n\n\n\n\n\n\n\nReboot\n\n\n\n\n\n\n\n- Now you have your own Linux, use your account settle just now and you can practise your Linux skills.\n\n\n\n\nWhat's next ###\n\n\nIf you can stand the inconvenient (cannot copy and paste) then you can begin your trip from \nhere\n\n\nIf you cannot stand, refer \nhere\n to set up your environment so that you can use PuTTY to connect to your server.",
-            "title": "Virtual Machine"
+            "title": "VM Installation"
         },
         {
             "location": "/vm/virtual-machine-setting/#how-to-set-your-linux-virtual-machine",
@@ -144,6 +144,26 @@
             "location": "/vm/virtual-machine-setting/#whats-next",
             "text": "If you can stand the inconvenient (cannot copy and paste) then you can begin your trip from  here  If you cannot stand, refer  here  to set up your environment so that you can use PuTTY to connect to your server.",
             "title": "What's next ###"
+        },
+        {
+            "location": "/vm/network_config/",
+            "text": "Virtual Machine Network setting\n\n\nNetwork Interface Types in VM\n\n\nThere are 3 main types of network connection types for Vm:\n\n\n\n\nHost only\n\n\n\n\nIn this case, the vm can only be accessed via your computer and vm cannot connect to the internet which means you may have some problems when try to download or install some softwares.\n\n\n\n\nNAT\n\n\n\n\nSimply speaking, VM using NAT can access internet but the VM and host computer are not in the same local area network so that your host computer may not connect to this VM unless you do some more configuration on your host computer.\n\n\n\n\nBridge\n\n\n\n\nThe VM will be treated as a stand alone computer in your LAN. You can just treat it as a physical machine in the network. In this case, the VM can access the internet and the host computer can connect to VM as well.\n\n\nHow to config\n\n\n\n\nShotdown the VM.\n\n\nRight click the VM icon and select *\nsettings\n.\n\n\n\n\n\n\n\n\n\n\nCheck the ip address of your VM:\n\nifconfig|more\n\n\n\n\n\n\n\n\nConnect to your VM using PuTTY.",
+            "title": "VM Network Configuration"
+        },
+        {
+            "location": "/vm/network_config/#virtual-machine-network-setting",
+            "text": "",
+            "title": "Virtual Machine Network setting"
+        },
+        {
+            "location": "/vm/network_config/#network-interface-types-in-vm",
+            "text": "There are 3 main types of network connection types for Vm:   Host only   In this case, the vm can only be accessed via your computer and vm cannot connect to the internet which means you may have some problems when try to download or install some softwares.   NAT   Simply speaking, VM using NAT can access internet but the VM and host computer are not in the same local area network so that your host computer may not connect to this VM unless you do some more configuration on your host computer.   Bridge   The VM will be treated as a stand alone computer in your LAN. You can just treat it as a physical machine in the network. In this case, the VM can access the internet and the host computer can connect to VM as well.",
+            "title": "Network Interface Types in VM"
+        },
+        {
+            "location": "/vm/network_config/#how-to-config",
+            "text": "Shotdown the VM.  Right click the VM icon and select * settings .      Check the ip address of your VM: ifconfig|more     Connect to your VM using PuTTY.",
+            "title": "How to config"
         }
     ]
 }

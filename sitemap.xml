@@ -66,11 +66,19 @@
     
 
     
+        
     <url>
      <loc>/vm/virtual-machine-setting/</loc>
      <lastmod>2017-08-14</lastmod>
      <changefreq>daily</changefreq>
     </url>
+        
+    <url>
+     <loc>/vm/network_config/</loc>
+     <lastmod>2017-08-14</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
     
 
 </urlset>
