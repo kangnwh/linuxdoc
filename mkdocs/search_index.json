@@ -147,7 +147,7 @@
         },
         {
             "location": "/vm/network_config/",
-            "text": "Virtual Machine Network setting\n\n\nNetwork Interface Types in VM\n\n\nThere are 3 main types of network connection types for Vm:\n\n\n\n\nHost only\n\n\n\n\nIn this case, the vm can only be accessed via your computer and vm cannot connect to the internet which means you may have some problems when try to download or install some softwares.\n\n\n\n\nNAT\n\n\n\n\nSimply speaking, VM using NAT can access internet but the VM and host computer are not in the same local area network so that your host computer may not connect to this VM unless you do some more configuration on your host computer.\n\n\n\n\nBridge\n\n\n\n\nThe VM will be treated as a stand alone computer in your LAN. You can just treat it as a physical machine in the network. In this case, the VM can access the internet and the host computer can connect to VM as well.\n\n\nHow to config\n\n\n\n\nShotdown the VM.\n\n\nRight click the VM icon and select *\nsettings\n.\n\n\n\n\n\n\n\n\n\n\nCheck the ip address of your VM:\n\nifconfig|more\n\n\n\n\n\n\n\n\nConnect to your VM using PuTTY.",
+            "text": "Virtual Machine Network setting\n\n\nNetwork Interface Types in VM\n\n\nThere are 3 main types of network connection types for Vm:\n\n\n\n\nHost only\n\n\n\n\nIn this case, the vm can only be accessed via your computer and vm cannot connect to the internet which means you may have some problems when try to download or install some softwares.\n\n\n\n\nNAT\n\n\n\n\nSimply speaking, VM using NAT can access internet but the VM and host computer are not in the same local area network so that your host computer may not connect to this VM unless you do some more configuration on your host computer.\n\n\n\n\nBridge\n\n\n\n\nThe VM will be treated as a stand alone computer in your LAN. You can just treat it as a physical machine in the network. In this case, the VM can access the internet and the host computer can connect to VM as well.\n\n\nHow to config\n\n\n\n\nShotdown the VM.\n\n\nRight click the VM icon and select *\nsettings\n.\n\n\n\n\n\n\n\n\n\n\nCheck the ip address of your VM: \nifconfig|more\n\n\n\n\n\n\n\n\nConnect to your VM using PuTTY.",
             "title": "VM Network Configuration"
         },
         {
@@ -162,7 +162,7 @@
         },
         {
             "location": "/vm/network_config/#how-to-config",
-            "text": "Shotdown the VM.  Right click the VM icon and select * settings .      Check the ip address of your VM: ifconfig|more     Connect to your VM using PuTTY.",
+            "text": "Shotdown the VM.  Right click the VM icon and select * settings .      Check the ip address of your VM:  ifconfig|more     Connect to your VM using PuTTY.",
             "title": "How to config"
         }
     ]
