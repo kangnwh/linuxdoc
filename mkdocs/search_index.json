@@ -46,14 +46,39 @@
             "title": "Advanced Text editing"
         },
         {
-            "location": "/basic/folder-structure/",
-            "text": "Coming soon ...\n\n\n\n\n\n\n\n\nProvide your comment <\nhere\n>",
+            "location": "/basic/common-folder-structure/",
+            "text": "Some common folders & files in Linux will be introduced in this chapter\n\n\n/etc\n\n\n\n\n/etc/passwd\n\n\n/etc/groups\n\n\n\n\n/bin & /sbin\n\n\n\n\n/bin: The executable applications(commands) that can be accessed from any users.\n\n\n/sbin: The executable applications(commands) that can only be accessed from specific users such as \nroot\n\n\n\n\n/home\n\n\nDefault home directory for \nall users\n except \nroot\n.\n\n\n/root\n\n\nDefault home dir for \nroot\n\n\n/tmp\n\n\nA folder that stores temporary files. Files in this folder will be removed at a specific frequency configured in Linux system.\n\n\n\n\nProvide your comment <\nhere\n>",
             "title": "Folder structure"
         },
         {
-            "location": "/basic/folder-structure/#coming-soon",
-            "text": "Provide your comment < here >",
-            "title": "Coming soon ..."
+            "location": "/basic/common-folder-structure/#some-common-folders-files-in-linux-will-be-introduced-in-this-chapter",
+            "text": "",
+            "title": "Some common folders &amp; files in Linux will be introduced in this chapter"
+        },
+        {
+            "location": "/basic/common-folder-structure/#etc",
+            "text": "/etc/passwd  /etc/groups",
+            "title": "/etc"
+        },
+        {
+            "location": "/basic/common-folder-structure/#bin-sbin",
+            "text": "/bin: The executable applications(commands) that can be accessed from any users.  /sbin: The executable applications(commands) that can only be accessed from specific users such as  root",
+            "title": "/bin &amp; /sbin"
+        },
+        {
+            "location": "/basic/common-folder-structure/#home",
+            "text": "Default home directory for  all users  except  root .",
+            "title": "/home"
+        },
+        {
+            "location": "/basic/common-folder-structure/#root",
+            "text": "Default home dir for  root",
+            "title": "/root"
+        },
+        {
+            "location": "/basic/common-folder-structure/#tmp",
+            "text": "A folder that stores temporary files. Files in this folder will be removed at a specific frequency configured in Linux system.   Provide your comment < here >",
+            "title": "/tmp"
         },
         {
             "location": "/basic/user-account-management/",
@@ -66,12 +91,12 @@
             "title": "Coming soon ..."
         },
         {
-            "location": "/basic/performssion/",
+            "location": "/basic/permission/",
             "text": "Coming soon ...\n\n\n\n\n\n\n\n\nProvide your comment <\nhere\n>",
             "title": "Performission Control"
         },
         {
-            "location": "/basic/performssion/#coming-soon",
+            "location": "/basic/permission/#coming-soon",
             "text": "Provide your comment < here >",
             "title": "Coming soon ..."
         },
