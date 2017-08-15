@@ -499,9 +499,37 @@
                 <h3 id="some-common-folders-files-in-linux-will-be-introduced-in-this-chapter">Some common folders &amp; files in Linux will be introduced in this chapter</h3>
 <h4 id="etc">/etc</h4>
 <ul>
-<li>/etc/passwd</li>
-<li>/etc/groups</li>
+<li>/etc/passwd: Stores the user account information. This file contains several columns separated by symbol <code>:</code>
+For example : <code>root:x:0:0:root:/root:/bin/zsh</code></li>
 </ul>
+<table>
+<thead>
+<tr>
+<th>root</th>
+<th>x</th>
+<th>0</th>
+<th>0</th>
+<th>root</th>
+<th>/root</th>
+<th>/bin/zsh</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>user_id</td>
+<td>password, always shows <code>x</code></td>
+<td>user sequence id</td>
+<td>main group sequence id</td>
+<td>full name of user</td>
+<td>home dir</td>
+<td>default shell type</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>/etc/group</li>
+</ul>
+<p>It's just like <code>/etc/passwd</code> but this file contains the information of gorups. Check <a href="https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/4/html/Introduction_To_System_Administration/s3-acctspgrps-group.html">here</a> for detail.</p>
 <h4 id="bin-sbin">/bin &amp; /sbin</h4>
 <ul>
 <li>/bin: The executable applications(commands) that can be accessed from any users.</li>
